@@ -1,13 +1,17 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template, send_from_directory
 import util
 
-app=Flask(__name__)
+app=Flask(__name__,template_folder=r'C:\Users\ishaan phaye\Desktop\VS Code\Data Science Projects\Real Estate Price Prediction\Real-Estate-Price-Prediction-Web-app\templates')
 
 util.load_saved_artifacts()
 
+@app.route('/static/<path:filename>')
+def serve_static(filename):
+    return send_from_directory('static', filename)
+
 @app.route('/')
 def starter():
-    return 'Starter page'
+    return render_template('app.html')
 
 @app.route('/get_location_names')
 def get_location_names():
