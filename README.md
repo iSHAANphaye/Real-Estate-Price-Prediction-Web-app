@@ -1,5 +1,6 @@
 # Real-Estate-Price-Prediction-Web-app
- 
+
+## A complete data science pipeline project.
 1. A real estate price prediction website based on Bangalore real estate data.
 2. Utilize scikit-learn and linear regression to construct a model.
 3. Employ the Banglore home prices dataset from Kaggle.com.
